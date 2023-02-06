@@ -17,20 +17,22 @@ export class AddCalculatorComponent implements OnInit {
   // result:nustmber = 0;
   constructor(formBuilder: FormBuilder) {
     this.calculadoraForm = formBuilder.group({
-      number1: ['', Validators.required],
+      number1: ['', Validators.required, Validators.pattern("^[0-9]*$")],
       number2: ['', Validators.required],
-      number3: ['', Validators.required],
+     
     });
   }
 
   ngOnInit(): void {}
-  respuesta(): void {
+
+  respuesta()  {
     let v1 = this.calculadoraForm.value.number1;
     let v2 = this.calculadoraForm.value.number2;
-    this.suma(v1, v2);
+    let result  = this.suma(v1, v2);    
+    this.result =  `${result}`;
   }
 
-  suma(val1: number, val2: number): void {
-    this.result = ` ${val1 + val2}`;
+   suma(val1: number, val2: number) {    
+    return val1 + val2;
   }
 }

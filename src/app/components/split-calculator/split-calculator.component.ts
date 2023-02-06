@@ -29,10 +29,17 @@ export class SplitCalculatorComponent implements OnInit {
     let v1 = this.splitForm.value.number1;
     let v2 = this.splitForm.value.number2;
     this.division(v1, v2);
+    let result = this.division;
+    this.result =  `${result}`;
   }
 
-  division(val1: number, val2: number): void {
-    this.result = ` ${val1 / val2}`;
+  division(val1: number, val2: number)  {
+    if(val2 === 0){
+      return 0;
+    }else{
+       return val1/val2;
+    }
+   
   }
 
 }

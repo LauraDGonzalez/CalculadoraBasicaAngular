@@ -25,14 +25,15 @@ export class MultiplytCalculatorComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-  respuesta(): void {
+  respuesta() {
     let v1 = this.multiplyForm.value.number1;
     let v2 = this.multiplyForm.value.number2;
-    this.multiplicacion(v1, v2);
+   let result = this.multiplicacion(v1, v2);
+   this.result =  `${result}`;
   }
 
-  multiplicacion(val1: number, val2: number): void {
-    this.result = ` ${val1 * val2}`;
+  multiplicacion(val1: number, val2: number) {
+    return val1 * val2;
   }
 
 }

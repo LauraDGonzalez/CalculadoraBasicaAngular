@@ -29,10 +29,12 @@ export class SubtractCalculatorComponent implements OnInit {
     let v1 = this.substractForm.value.number1;
     let v2 = this.substractForm.value.number2;
     this.resta(v1, v2);
+    let result = this.resta;
+    this.result =  `${result}`;
   }
 
-  resta(val1: number, val2: number): void {
-    this.result = ` ${val1 - val2}`;
+  resta(val1: number, val2: number) {
+    return val1 - val2;
   }
 
 }
