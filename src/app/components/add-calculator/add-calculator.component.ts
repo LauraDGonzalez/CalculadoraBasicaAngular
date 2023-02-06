@@ -31,6 +31,6 @@ export class AddCalculatorComponent implements OnInit {
   }
 
   suma(val1: number, val2: number): void {
-    this.result = ` ${val1 + val2}`;
+    this.result = ` ${val1 * val2}`;
   }
 }
