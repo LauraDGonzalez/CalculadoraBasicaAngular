@@ -25,9 +25,9 @@ export class AddCalculatorComponent implements OnInit {
 
   ngOnInit(): void {}
   respuesta(): void {
-    let v1 = this.calculadoraForm.value.number1;
-    let v2 = this.calculadoraForm.value.number2;
-    this.suma(v1, v2);
+    let value1 = this.calculadoraForm.value.number1;
+    let value2 = this.calculadoraForm.value.number2;
+    this.suma(value1, value2);
   }
 
   suma(val1: number, val2: number): void {
