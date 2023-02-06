@@ -32,7 +32,7 @@ export class AddCalculatorComponent implements OnInit {
     this.result =  `${result}`;
   }
 
-   suma(val1: number, val2: number) {    
-    return val1 + val2;
+   suma(val8881: number, val882: number) {    
+    return val8881 + val882;
   }
 }
